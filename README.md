@@ -1,6 +1,10 @@
 # Tugas Praktikum Git & GitHub - Reservasi Klinik Gigi
-
 Repository ini berisi kode sumber untuk bagian "reservasi website Klinik". Proyek ini dikerjakn untuk memenuhi dokumentasi dan simulasi alur kerja Git dan GitHub.
+
+# Website Reservasi Klinik Gigi
+
+## Deskripsi Project
+Proyek ini adalah antarmuka website statis berbasis HTML dan CSS untuk sistem reservasi "Klinik Gigi Senyum Cemerlang". Proyek ini dikembangkan secara spesifik sebagai sarana implementasi dan simulasi alur kerja *version control* menggunakan Git dan GitHub. Fitur utama antarmuka mencakup navigasi, deskripsi layanan, dan formulir pendaftaran pasien.
 
 ## Identitas Mahasiswa
 - **Nama:** Doly Immanuel
@@ -9,24 +13,37 @@ Repository ini berisi kode sumber untuk bagian "reservasi website Klinik". Proye
 - **Instansi:** Universitas Gadjah Mada
 
 ---
+## Cara Menjalankan
+Karena proyek ini merupakan website statis dasar (HTML & CSS murni), tidak diperlukan instalasi *server* lokal atau *framework* khusus. Berikut cara menjalankannya:
 
+1. Unduh (*Clone*) repository ini ke perangkat lokal Anda menggunakan terminal:
+   ```bash
+   git clone [https://github.com/dolybancin23-tech/praktikum-git-25-560171-SV-26398.git](https://github.com/dolybancin23-tech/praktikum-git-25-560171-SV-26398.git)
+
+
+   
 ## Alur Kerja Praktikum
-
 
 1. **Inisialisasi & Version Control Dasar (Tugas 1)**
    - Menginisialisasi repository secara lokal menggunakan `git clone`.
    - Membangun struktur HTML dasar dan *styling* CSS secara bertahap.
    - Mencatat setiap perubahan menggunakan 5 riwayat *commit* berstandar *Conventional Commits* (seperti `feat:`, `style:`, `chore:`).
    - Mengimplementasikan file `.gitignore` untuk mencegah file *log* sementara (`error.log`) terunggah ke server.
+     <img width="2852" height="1641" alt="Screenshot 2026-05-02 205920" src="https://github.com/user-attachments/assets/f10ffacb-94d2-4a42-9703-1965b53623d4" />
+
 
 2. **Branching & Pull Request (Tugas 2)**
    - Menerapkan konsep isolasi fitur dengan membuat percabangan (*branching*) terpisah untuk pengembangan: `feature/navbar`, `feature/footer`, dan `hotfix/typo`.
    - Menggabungkan kode ke *branch* utama (`main`) menggunakan metode *Pull Request* (PR) di GitHub dengan strategi *Squash and merge* dan *Merge commit*.
    - Mengamankan *branch* utama dengan mengaktifkan **Branch Protection Rule** (*Require a pull request before merging*).
+     <img width="2871" height="1701" alt="Screenshot 2026-05-02 210830" src="https://github.com/user-attachments/assets/62af8226-2ed4-446a-8261-81afb45ca82f" />
+
 
 3. **Resolusi Konflik & Interactive Rebase (Tugas 3)**
    - **Simulasi Konflik:** Membuat dua *branch* eksperimen (`experiment/bg-green` dan `experiment/bg-blue`) yang mengubah baris kode CSS yang sama. Resolusi konflik diselesaikan secara manual saat proses *merge* di GitHub.
    - **Interactive Rebase:** Menggunakan perintah `git rebase -i HEAD~3` pada *branch* `feature/rebase-test` untuk merapikan riwayat dengan melebur (*squash*) 3 *commit* sementara menjadi 1 *commit* yang bersih.
+
+
 
 4. **Kolaborasi & Manajemen Proyek (Tugas 4)**
    - Mendokumentasikan rencana pengembangan melalui pembuatan 3 tiket di tab **Issues** GitHub.
@@ -36,19 +53,34 @@ Repository ini berisi kode sumber untuk bagian "reservasi website Klinik". Proye
 
 ---
 
-## 📸 Bukti Pengerjaan Praktikum
+## Screenshot hasil
 
 ### 1. Bukti Riwayat Commit & Branching (Tugas 1 & 3)
 > **Catatan:** Gambar di bawah ini adalah tangkapan layar dari hasil perintah `git log --oneline --graph --all` yang menunjukkan riwayat 5 commit awal, pembuatan branch fitur, serta riwayat *merge* dan *rebase*.
+<img width="1725" height="249" alt="Screenshot 2026-05-02 210433" src="https://github.com/user-attachments/assets/8f11b81c-fc63-47f5-9e21-100085f3e5db" />
 
-*(TEMPAT GAMBAR 1)*
 
 ### 2. Bukti Branch Protection Rule (Tugas 2)
 > **Catatan:** Gambar di bawah ini membuktikan bahwa branch `main` telah dilindungi dengan aturan *Require a pull request before merging*, sehingga tidak bisa di-push secara langsung tanpa proses *review*.
 
-*(TEMPAT GAMBAR 2)*
+<img width="2128" height="659" alt="Screenshot 2026-05-02 211351" src="https://github.com/user-attachments/assets/4633b1d3-f514-4d19-af02-b5001246093c" />
+
+
+### 3. Bukti Resolusi Konflik & Interactive Rebase (Tugas 3)
+> **Catatan:** Gambar di bawah ini membuktikan bahwa riwayat *commit* sementara telah digabungkan (*squash*) menggunakan fitur *Interactive Rebase*, dan resolusi konflik CSS telah diselesaikan.
+
+<img width="2861" height="1705" alt="Screenshot 2026-05-02 213222" src="https://github.com/user-attachments/assets/10933e83-64ec-456b-b755-3b94e94a20cb" />
 
 ---
+### 4. Bukti Manajemen Proyek (Tugas 4)
+> **Catatan:** Gambar-gambar di bawah ini merupakan bukti implementasi kolaborasi dan manajemen proyek, meliputi pembuatan *Issues* dan penambahan *Collaborator*
+
+*Dokumentasi Issue
+<img width="2400" height="705" alt="Screenshot 2026-05-02 213623" src="https://github.com/user-attachments/assets/b1c3ac9c-66e0-421c-9551-5783e868cfa9" />
+
+*Screenshot Website
+<img width="2854" height="1533" alt="Screenshot 2026-05-02 215714" src="https://github.com/user-attachments/assets/5c60845a-91c0-4b60-8a63-ec496c521f5b" />
+
 
 ## 📝 Dokumentasi Perintah Git yang Digunakan
 
